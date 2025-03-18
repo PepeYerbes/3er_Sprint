@@ -1,0 +1,16 @@
+<div style="width: 50%; margin: 0 auto">
+  <div
+    [ngClass]="displayMode === 'grid' ? 'grid' : 'list'">
+    @for(p of products; track $index;  ) {
+      <div class="card" class="card col-md-3 mb-4">
+           <img [src]="p.img" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ p.name }}</h5>
+        <p class="card-text">{{ p.description }}</p>
+        <p class="card-price">{{ p.price | currency: 'MXN':'symbol':'1.0-0' }}</p>
+        <button class="btn btn-primary" style="background-color: blue;">Agregar al Carrito</button>
+      </div>
+    </div>
+    } 
+  </div>
+</div>

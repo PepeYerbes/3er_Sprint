@@ -1,0 +1,6 @@
+<div style="text-align:end;padding: 10px;">
+  <button (click)="changeDisplayMode('grid')" style="font-size:28px;margin-right: 10px;color: blue;" class="fas fa-th"></button>
+  <button (click)="changeDisplayMode('list')" style="font-size:28px;margin-right: 10px;color: blue;" class="fas fa-list"></button>
+</div>
+
+<app-home [displayMode]="displayMode" (productClicked)="onProductClicked($event)" [products]="products"></app-home>
